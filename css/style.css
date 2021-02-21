@@ -1,0 +1,174 @@
+/**Purpose: this is the css file 
+*Name: Dan Zhap
+*Date: Dec 9th 2020
+*/
+
+h1, h2, h3{
+  font-family: "Montserrat", sans-serif;
+}
+p, a{
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+body{
+    /** remove the margin from the body **/
+    margin: 0px !important;
+    /** set up our grid **/
+    grid-template-areas:
+    "header header header header"
+    "main main main main"
+    "footer footer footer footer";
+    grid-template-rows: auto;
+}
+
+header{
+  grid-area: header;/*为每一个网格分配一个名字*/
+  display:flex;
+  align-items: center;
+  height: 100px;
+
+}
+header > article{
+  flex-grow: 1;
+  height: 100%; 
+
+}
+header > article > img{
+  height: 80%;
+  width: auto; 
+  padding: 10px 5px;
+}
+
+header > nav > ul{
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+header > nav > ul > li{
+  padding: 0px 25px;
+
+}
+header > nav > ul > li > a{
+  color:white;
+ 
+  text-decoration: none; 
+
+}
+header > nav > ul > li:hover > a{
+  
+  font-size: 25px;
+  font-style:oblique;
+}
+
+main{
+
+  /** we will also make our main a grid container **/
+  grid-area: main;
+  grid-template-areas:  
+  "masthead masthead masthead masthead"
+  "gallery gallery gallery gallery";
+  grid-template-rows: auto;
+
+}
+/** styling the main content **/
+main > .masthead{
+  grid-area: masthead;
+  /** add the background image **/
+  background-image: url("../img/villa4.jpg"); 
+  background-size: cover;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 25px 40px;
+}
+/** masthead content **/
+main > .masthead > div:nth-child(1){
+  /** We are going to add a semi-transparent mask over the image **/
+  /** Georgain Blue Semi-transparent **/
+  background-color: rgba( 100,100,100,0.4);
+  /** going to add flex so that we can align our content **/
+  grid-column: 1 / span 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /** I need the direction is column not row **/
+  flex-direction: column;
+
+}
+/** gallery content **/
+main > .gallery {
+  grid-area:gallery;
+  background-color: #202020;
+  margin-top: 0px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+
+
+} 
+/** footer content **/
+footer {
+  grid-area:footer;
+  background-color: #202020;
+  margin-top: 0px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  height: 200px;
+
+}
+/** album content **/
+.album{
+	display:grid;
+	grid-template-columns: repeat(8,12.5% [col-start]);
+	grid-row-gap: 15px;
+	justify-items: center ;
+    align-items: center;
+
+    
+}
+/** image content **/
+.album>img{
+  height: 145px;
+  width:85%;
+  overflow: hidden;
+  border: 2px solid white;
+  border-radius: 25px;
+
+
+}
+
+
+
+
+
+/** scrolled-menu content **/
+
+.scrolled-menu{
+  background-color: #000000;
+  position: fixed;
+  width: 100%;
+}
+/** a in the scrolled-menu content  **/
+.scrolled-menu > nav > ul > li > a{
+  color: #ffffff;
+}
+/** hightlight content **/
+.highlight{
+  background-color: #3F7FBF;
+ 
+}
+
+
+
+
