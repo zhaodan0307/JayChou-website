@@ -74,7 +74,7 @@ main{
 main > .masthead{
   grid-area: masthead;
   /** add the background image **/
-  background-image: url("../img/villa4.jpg"); 
+  background-image: url("../img/jc.jpg");
   background-size: cover;
   height: 80vh;
   display: grid;
